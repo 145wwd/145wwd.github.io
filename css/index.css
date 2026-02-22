@@ -20418,7 +20418,9 @@ html.hide-aside .layout > div:first-child {
 }
 
 /* 表格表头样式优化 - 确保字体颜色与背景对比度足够 */
-table th {
+/* 排除代码块中的表格（.highlight table 或 figure.highlight table） */
+table:not(.highlight):not(figure.highlight) th,
+#article-container table:not(.highlight):not(figure.highlight) th {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
@@ -20427,14 +20429,16 @@ table th {
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* 表格单元格样式 */
-table td {
+/* 表格单元格样式 - 排除代码块 */
+table:not(.highlight):not(figure.highlight) td,
+#article-container table:not(.highlight):not(figure.highlight) td {
   padding: 10px 15px !important;
   border: 1px solid #e0e0e0 !important;
 }
 
-/* 表格整体样式 */
-table {
+/* 表格整体样式 - 排除代码块 */
+table:not(.highlight):not(figure.highlight),
+#article-container table:not(.highlight):not(figure.highlight) {
   border-collapse: collapse !important;
   width: 100% !important;
   margin: 15px 0 !important;
@@ -20443,24 +20447,28 @@ table {
   overflow: hidden !important;
 }
 
-/* 表格行悬停效果 */
-table tr:hover {
+/* 表格行悬停效果 - 排除代码块 */
+table:not(.highlight):not(figure.highlight) tr:hover,
+#article-container table:not(.highlight):not(figure.highlight) tr:hover {
   background-color: rgba(102, 126, 234, 0.05) !important;
 }
 
-/* 夜间模式表格样式 */
-[data-theme="dark"] table th {
+/* 夜间模式表格样式 - 排除代码块 */
+[data-theme="dark"] table:not(.highlight):not(figure.highlight) th,
+[data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) th {
   background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-[data-theme="dark"] table td {
+[data-theme="dark"] table:not(.highlight):not(figure.highlight) td,
+[data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) td {
   border: 1px solid #4a5568 !important;
   color: #e2e8f0 !important;
 }
 
-[data-theme="dark"] table tr:hover {
+[data-theme="dark"] table:not(.highlight):not(figure.highlight) tr:hover,
+[data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) tr:hover {
   background-color: rgba(74, 85, 104, 0.3) !important;
 }
 
