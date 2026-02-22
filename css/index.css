@@ -20392,6 +20392,23 @@ html.hide-aside .layout > div:first-child {
   }
 }
 
+/* 首页分类按钮自定义颜色 - 金紫富贵配色 */
+.categoryButton.bazi-gold {
+  background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);
+  color: #fff;
+}
+.categoryButton.bazi-gold:hover {
+  background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
+}
+
+.categoryButton.liuren-purple {
+  background: linear-gradient(135deg, #4B0082 0%, #6A0DAD 100%);
+  color: #fff;
+}
+.categoryButton.liuren-purple:hover {
+  background: linear-gradient(135deg, #6A0DAD 0%, #8A2BE2 100%);
+}
+
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
