@@ -20203,7 +20203,7 @@ svg.icon {
 }
 
 /* 解决artitalk的图标问题 */
-#uploadSource > svg {
+#uploadSource>svg {
   width: 1.19em;
   height: 1.5em;
 }
@@ -20217,9 +20217,11 @@ svg.icon {
 div#post {
   background: rgba(255, 255, 255, 0.9);
 }
-#recent-posts > .recent-post-item:not(:first-child):active {
+
+#recent-posts>.recent-post-item:not(:first-child):active {
   transform: scale(0.97);
 }
+
 /* 分页页面 */
 div#page {
   background: rgba(255, 255, 255, 0.9);
@@ -20241,7 +20243,7 @@ div#category {
 }
 
 /*夜间模式伪类遮罩层透明*/
-[data-theme="dark"] #recent-posts > .recent-post-item {
+[data-theme="dark"] #recent-posts>.recent-post-item {
   background: #121212;
 }
 
@@ -20292,10 +20294,7 @@ div#category {
   font-size: 14px;
 }
 
-#article-container
-  a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.tag-Link):not(.btn-anzhiyu):not(
-    .no-text-decoration
-  ) {
+#article-container a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.tag-Link):not(.btn-anzhiyu):not(.no-text-decoration) {
   font-weight: 500;
   border-bottom: solid 2px var(--anzhiyu-lighttext);
   color: var(--anzhiyu-fontcolor);
@@ -20303,10 +20302,8 @@ div#category {
   text-decoration: none;
   font-family: inherit;
 }
-#article-container
-  a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.btn-anzhiyu):not(
-    .no-text-decoration
-  ):hover {
+
+#article-container a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.btn-anzhiyu):not(.no-text-decoration):hover {
   color: var(--anzhiyu-white);
   background: var(--anzhiyu-main);
   box-shadow: var(--anzhiyu-shadow-lightblack);
@@ -20314,7 +20311,7 @@ div#category {
   text-decoration: none;
 }
 
-html.hide-aside .layout > div:first-child {
+html.hide-aside .layout>div:first-child {
   width: 100%;
 }
 
@@ -20328,9 +20325,11 @@ html.hide-aside .layout > div:first-child {
 #recent-posts .recent-post-item:hover {
   border: var(--style-border-hover);
 }
+
 #recent-posts .recent-post-item:hover .recent-post-info .article-title {
   color: var(--anzhiyu-theme);
 }
+
 #recent-posts .recent-post-item {
   height: fit-content;
   background: var(--anzhiyu-card-bg);
@@ -20340,15 +20339,17 @@ html.hide-aside .layout > div:first-child {
   box-shadow: var(--anzhiyu-shadow-border);
   user-select: none;
 }
+
 /* 移动端容器padding */
 @media screen and (max-width: 768px) {
   #body-wrap .layout #page {
     padding: 20px 15px !important;
   }
 }
+
 /* 首页文章宽度 */
 @media screen and (max-width: 1200px) {
-  .layout > div:first-child {
+  .layout>div:first-child {
     width: 100% !important;
   }
 }
@@ -20358,7 +20359,7 @@ html.hide-aside .layout > div:first-child {
 }
 
 @media screen and (max-width: 768px) {
-  .layout > div:first-child:not(.recent-posts) {
+  .layout>div:first-child:not(.recent-posts) {
     border-radius: 12px 12px 0 0;
   }
 }
@@ -20366,12 +20367,13 @@ html.hide-aside .layout > div:first-child {
 .banners-title {
   animation: slide-in 0.6s 0.3s backwards;
 }
+
 #algolia-search .search-dialog {
   animation: slide-in 0.6s ease 0s 1 normal none running;
 }
 
 @media screen and (min-width: 1200px) {
-  #page > div:not(.author-content-item) {
+  #page>div:not(.author-content-item) {
     animation: slide-in 0.6s 0.2s backwards;
   }
 }
@@ -20387,6 +20389,7 @@ html.hide-aside .layout > div:first-child {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -20397,6 +20400,7 @@ html.hide-aside .layout > div:first-child {
   background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);
   color: #fff;
 }
+
 .categoryButton.bazi-gold:hover {
   background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%);
 }
@@ -20405,6 +20409,7 @@ html.hide-aside .layout > div:first-child {
   background: linear-gradient(135deg, #4B0082 0%, #6A0DAD 100%);
   color: #fff;
 }
+
 .categoryButton.liuren-purple:hover {
   background: linear-gradient(135deg, #6A0DAD 0%, #8A2BE2 100%);
 }
@@ -20413,6 +20418,7 @@ html.hide-aside .layout > div:first-child {
   background: linear-gradient(135deg, #228B22 0%, #006400 100%);
   color: #fff;
 }
+
 .categoryButton.traditional-green:hover {
   background: linear-gradient(135deg, #32CD32 0%, #228B22 100%);
 }
@@ -20421,7 +20427,7 @@ html.hide-aside .layout > div:first-child {
 /* 排除代码块中的表格（.highlight table 或 figure.highlight table） */
 table:not(.highlight):not(figure.highlight) th,
 #article-container table:not(.highlight):not(figure.highlight) th {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: #5a67d8 !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   padding: 12px 15px !important;
@@ -20456,7 +20462,7 @@ table:not(.highlight):not(figure.highlight) tr:hover,
 /* 夜间模式表格样式 - 排除代码块 */
 [data-theme="dark"] table:not(.highlight):not(figure.highlight) th,
 [data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) th {
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+  background: #4a5568 !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
@@ -20471,7 +20477,6 @@ table:not(.highlight):not(figure.highlight) tr:hover,
 [data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) tr:hover {
   background-color: rgba(74, 85, 104, 0.3) !important;
 }
-
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
