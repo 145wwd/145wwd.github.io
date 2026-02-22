@@ -20409,6 +20409,14 @@ html.hide-aside .layout > div:first-child {
   background: linear-gradient(135deg, #6A0DAD 0%, #8A2BE2 100%);
 }
 
+.categoryButton.traditional-green {
+  background: linear-gradient(135deg, #228B22 0%, #006400 100%);
+  color: #fff;
+}
+.categoryButton.traditional-green:hover {
+  background: linear-gradient(135deg, #32CD32 0%, #228B22 100%);
+}
+
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
