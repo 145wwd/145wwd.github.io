@@ -1,46 +1,39 @@
 menu:
+   首页:
+     回到首页: / || anzhiyu-icon-home
+
+   服务:
+     大六壬占卜: /tags/大六壬/ || anzhiyu-icon-yin-yang
+     盲派八字: /tags/八字/ || anzhiyu-icon-star
+     风水调理: /about/ || anzhiyu-icon-compass
+
    文章:
-     隧道: /archives/ || anzhiyu-icon-box-archive
-     分类: /categories/ || anzhiyu-icon-shapes
-     标签: /tags/ || anzhiyu-icon-tags
-
-   友链:
-     友人帐: /link/ || anzhiyu-icon-link
-     朋友圈: /fcircle/ || anzhiyu-icon-artstation
-     留言板: /comments/ || anzhiyu-icon-envelope
-
-   我的:
-     音乐馆: /music/ || anzhiyu-icon-music
-     追番页: /bangumis/ || anzhiyu-icon-bilibili
-     相册集: /album/ || anzhiyu-icon-images
-     小空调: /air-conditioner/ || anzhiyu-icon-fan
+     全部文章: /archives/ || anzhiyu-icon-box-archive
+     分类浏览: /categories/ || anzhiyu-icon-shapes
+     标签索引: /tags/ || anzhiyu-icon-tags
 
    关于:
-     关于本人: /about/ || anzhiyu-icon-paper-plane
-     闲言碎语: /essay/ || anzhiyu-icon-lightbulb
-     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
+     关于阁主: /about/ || anzhiyu-icon-user
 
 # nav相关配置
 nav:
-  enable: true
+  enable: false
   travelling: false
   clock: false
   menu:
-    - title: 网页
+    - title: 服务
       item:
-        - name: 博客
-          link: https://hexo.anheyu.com/
-          icon: /img/favicon.ico
-    - title: 项目
-      item:
-        - name: 安知鱼图床
-          link: https://image.anheyu.com/
-          icon: https://image.anheyu.com/favicon.ico
+        - name: 大六壬占卜
+          link: /tags/大六壬/
+          icon: anzhiyu-icon-yin-yang
+        - name: 八字命理
+          link: /categories/传统文化/
+          icon: anzhiyu-icon-star
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
 # 注意： 仅网站首页变灰，其他页面正常显示
 mourn:
-  enable: true
+  enable: false
   days: [4-5, 5-12, 7-7, 9-18, 12-13]
 
 # Code Blocks (代码相关)
@@ -59,7 +52,7 @@ code_word_wrap: false
 copy:
   enable: true
   copyright:
-    enable: true
+    enable: false
     limit_count: 50
 
 # social settings (社交图标设置)
@@ -71,7 +64,7 @@ social:
 
 # 作者卡片 状态
 author_status:
-  enable: true
+  enable: false
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
@@ -122,12 +115,12 @@ local_search:
 
 # MathJax
 mathjax:
-  enable: true
+  enable: false
   per_page: false
 
 # KaTeX
 katex:
-  enable: true
+  enable: false
   per_page: false
   hide_scrollbar: true
 
@@ -139,7 +132,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://bu.dusays.com/2023/04/27/64496e511b09c.jpg
+  img: https://wp-cdn.4ce.cn/v2/tmTTj9I.jpeg
   effect: false
 
 # Disable all banner image
@@ -191,7 +184,7 @@ post_meta:
 
 # 主色调相关配置
 mainTone:
-  enable: true # true or false 文章是否启用获取图片主色调
+  enable: false # true or false 文章是否启用获取图片主色调
   mode: api # colorthief/cdn/api/both colorthief模式为前端获取图片主色调，cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取，可以在文章内配置main_color: '#3e5658'，使用十六进制颜色，则不会请求colorthief/cdn/api/both获取主色调，而是直接使用配置的颜色
   # 项目地址：https://github.com/anzhiyu-c/img2color-go
   api: https://img2color-go.vercel.app/api?img= # mode为api时可填写
@@ -215,7 +208,7 @@ index_post_content:
 
 # anchor
 # when you scroll in post, the URL will update according to header id.
-anchor: true
+anchor: false
 
 # Post
 # --------------------------------------
@@ -254,7 +247,7 @@ reward:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit: # 目前仅可选择一个平台在线编辑
-  enable: true
+  enable: false
   # github: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
   github: false
@@ -284,7 +277,7 @@ post_pagination: 2
 
 # Displays outdated notice for a post (文章过期提醒)
 noticeOutdate:
-  enable: true
+  enable: false
   style: flat # style: simple/flat
   limit_day: 365 # When will it be shown
   position: top # position: top/bottom
@@ -303,7 +296,7 @@ sharejs:
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: true
+  enable: false
   item: facebook,twitter,wechat,sina_weibo,email,copy_link
 
 # Comments System
@@ -391,7 +384,7 @@ giscus:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: true
+chat_btn: false
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
 chat_hide_show: false
@@ -399,25 +392,25 @@ chat_hide_show: false
 # chatra
 # https://chatra.io/
 chatra:
-  enable: true
+  enable: false
   id:
 
 # tidio
 # https://www.tidio.com/
 tidio:
-  enable: true
+  enable: false
   public_key:
 
 # daovoice
 # http://daovoice.io/
 daovoice:
-  enable: true
+  enable: false
   app_id:
 
 # crisp
 # https://crisp.chat/en/
 crisp:
-  enable: true
+  enable: false
   website_id:
 
 # Footer Settings
@@ -428,7 +421,7 @@ footer:
     since: 2020
   custom_text:
   runtime:
-    enable: true
+    enable: false
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
@@ -437,7 +430,7 @@ footer:
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: true
+    enable: false
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
@@ -455,7 +448,7 @@ footer:
       #   shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
       #   message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
   socialBar:
-    enable: true
+    enable: false
     centerImg:
     left:
       # - title: email
@@ -484,7 +477,7 @@ footer:
       #   link: /copyright
       #   icon: anzhiyu-icon-copyright-line
   list:
-    enable: true
+    enable: false
     randomFriends: 3
     project:
       # - title: 服务
@@ -523,7 +516,7 @@ footer:
     enable: true
     authorLink: /
     cc:
-      enable: true
+      enable: false
       link: /copyright
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
@@ -533,7 +526,7 @@ footer:
       # - link: https://beian.miit.gov.cn/
       #   text: 湘ICP备-xxxxxxx号
     subTitle:
-      enable: true
+      enable: false
       # Typewriter Effect (打字效果)
       effect: true
       # Effect Speed Options (打字效果速度参数)
@@ -581,7 +574,7 @@ microsoft_clarity:
 
 # Google Adsense (谷歌广告)
 google_adsense:
-  enable: true
+  enable: false
   auto_ads: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client:
@@ -641,10 +634,10 @@ sidebar:
   nav_menu_project: true
 
 # 文章h2添加分隔线
-h2Divider: true
+h2Divider: false
 
 # 表格隔行变色
-table_interlaced_discoloration: true
+table_interlaced_discoloration: false
 
 # 首页双栏显示
 article_double_row: true
@@ -674,7 +667,7 @@ rightside-bottom: 100px
 # canvas_ribbon (静止彩带背景)
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: true
+  enable: false
   size: 150
   alpha: 0.6
   zIndex: -1
@@ -683,13 +676,13 @@ canvas_ribbon:
 
 # Fluttering Ribbon (动态彩带)
 canvas_fluttering_ribbon:
-  enable: true
+  enable: false
   mobile: false
 
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: true
+  enable: false
   color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
@@ -699,25 +692,25 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   colorful: true # open particle animation (冒光特效)
   shake: false #  open shake (抖动特效)
   mobile: false
 
 # Mouse click effects: fireworks (鼠标点击效果: 烟火特效)
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999 # -1 or 9999
   mobile: false
 
 # Mouse click effects: Heart symbol (鼠标点击效果: 爱心)
 click_heart:
-  enable: true
+  enable: false
   mobile: false
 
 # Mouse click effects: words (鼠标点击效果: 文字)
 ClickShowText:
-  enable: true
+  enable: false
   text:
     # - I
     # - LOVE
@@ -759,7 +752,7 @@ hr_icon:
 
 # the subtitle on homepage (主页subtitle)
 subtitle:
-  enable: true
+  enable: false
   # Typewriter Effect (打字效果)
   effect: true
   # Effect Speed Options (打字效果速度参数)
@@ -810,7 +803,7 @@ aside:
     name_link: /
 
   card_announcement:
-    enable: true
+    enable: false
     content: 欢迎来看我的博客鸭~
   card_weixin:
     enable: true
@@ -822,7 +815,7 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: true
+    enable: false
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
@@ -930,7 +923,7 @@ darkmode:
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat 不要重複
 rightside_item_order:
-  enable: true
+  enable: false
   hide: # readmode,translate,darkmode,hideAside
   show: # toc,chat,comment
 
@@ -952,7 +945,7 @@ fancybox: true
 # mermaid
 # see https://github.com/mermaid-js/mermaid
 mermaid:
-  enable: true
+  enable: false
   # built-in themes: default/forest/dark/neutral
   theme:
     light: default
@@ -1011,7 +1004,7 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
-  enable: true
+  enable: false
   field: site # site/post
 
 # Lazyload (图片懒加载)
@@ -1027,7 +1020,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: true
+  enable: false
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)
@@ -1052,35 +1045,35 @@ home_top:
   subTitle: 万物可爱。
   siteText: anheyu.com
   category:
-    - name: 前端
-      path: /categories/前端开发/
-      shadow: var(--anzhiyu-shadow-blue)
-      class: blue
-      icon: anzhiyu-icon-dove
-    - name: 大学
-      path: /categories/大学生涯/
-      shadow: var(--anzhiyu-shadow-red)
-      class: red
-      icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活日常/
-      shadow: var(--anzhiyu-shadow-green)
-      class: green
-      icon: anzhiyu-icon-book
+    - name: 盲派命理
+      path: /categories/盲派命理/
+      shadow: 0 8px 12px -3px rgba(218, 165, 32, 0.3)
+      class: bazi-gold
+      icon: anzhiyu-icon-star
+    - name: 大六壬
+      path: /tags/大六壬/
+      shadow: 0 8px 12px -3px rgba(75, 0, 130, 0.3)
+      class: liuren-purple
+      icon: anzhiyu-icon-yin-yang
+    - name: 传统文化
+      path: /categories/传统文化/
+      shadow: 0 8px 12px -3px rgba(34, 139, 34, 0.3)
+      class: traditional-green
+      icon: anzhiyu-icon-scroll
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
-    enable: true
+    enable: false
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
-    image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    tips: 专业命理
+    title: 玄机阁
+    image: https://wp-cdn.4ce.cn/v2/bBKTGNg.png
+    link: https://xuanxue.daliuren.cfd/about/
 
 # 朋友圈配置
 friends_vue:
-  enable: true
+  enable: false
   vue_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.1/friends/index.4f887d95.js
   apiurl: # 朋友圈后端地址
   top_tips: 使用 友链朋友圈 订阅友链最新文章
@@ -1092,7 +1085,7 @@ universe:
 
 # 页面卡片顶部气泡升起效果
 bubble:
-  enable: true
+  enable: false
 
 #  控制台打印信息
 console:
@@ -1100,14 +1093,14 @@ console:
 
 # 51a统计配置
 LA:
-  enable: true
+  enable: false
   ck:
   LingQueMonitorID:
 
 # Umami 统计配置（关于页面访问统计卡片）
 # 文档: https://umami.is/docs/api
 umami:
-  enable: true
+  enable: false
   # Umami API 地址，如 https://analytics.example.com
   apiHost:
   # 网站 ID
@@ -1123,7 +1116,7 @@ diytitle:
 
 # 留言弹幕配置
 comment_barrage_config:
-  enable: true
+  enable: false
   # 同时最多显示弹幕数
   maxBarrage: 1
   # 弹幕显示间隔时间ms
@@ -1162,7 +1155,7 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: true #开启后必须配置下面的list对应的时间段，不然会出现小白条
+  enable: false #开启后必须配置下面的list对应的时间段，不然会出现小白条
   default: 晚上好👋
   list:
     # - greeting: 晚安😴
@@ -1204,7 +1197,7 @@ post_head_ai_description:
 
 # 快捷键配置
 shortcutKey:
-  enable: true
+  enable: false
   delay: 100 # 所有键位延时触发而不是立即触发（包括shift，以解决和浏览器键位冲突问题）
   shiftDelay: 200 # shift按下延时多久开启
 
@@ -1214,7 +1207,7 @@ accesskey:
 
 # 友情链接顶部相关配置
 linkPageTop:
-  enable: true
+  enable: false
   title: 与数百名博主无限进步
   # 添加博主友链的评论自定义格式
   addFriendPlaceholder: "昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"
@@ -1224,12 +1217,12 @@ pageThumbnailSuffix: ""
 
 # 隐私协议弹窗
 agreementPopup:
-  enable: true
+  enable: false
   url: /privacy
 
 # 右键菜单
 rightClickMenu:
-  enable: true
+  enable: false
 
 # 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
 peoplecanvas:
