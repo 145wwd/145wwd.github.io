@@ -20427,7 +20427,7 @@ html.hide-aside .layout>div:first-child {
 /* 排除代码块中的表格（.highlight table 或 figure.highlight table） */
 table:not(.highlight):not(figure.highlight) th,
 #article-container table:not(.highlight):not(figure.highlight) th {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0891b2 100%) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   padding: 12px 15px !important;
@@ -20462,7 +20462,7 @@ table:not(.highlight):not(figure.highlight) tr:hover,
 /* 夜间模式表格样式 - 排除代码块 */
 [data-theme="dark"] table:not(.highlight):not(figure.highlight) th,
 [data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) th {
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%) !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0e7490 100%) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
