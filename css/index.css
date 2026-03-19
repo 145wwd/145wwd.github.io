@@ -20477,6 +20477,392 @@ table:not(.highlight):not(figure.highlight) tr:hover,
 [data-theme="dark"] #article-container table:not(.highlight):not(figure.highlight) tr:hover {
   background-color: rgba(74, 85, 104, 0.3) !important;
 }
+
+/* 引用块（blockquote）样式优化 - 与深蓝渐变配色保持一致 */
+#article-container blockquote,
+.article-content blockquote,
+.markdown-body blockquote,
+blockquote {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.08) 0%, rgba(8, 145, 178, 0.08) 100%) !important;
+  border-left: 4px solid #1e3a8a !important;
+  border-radius: 0 8px 8px 0 !important;
+  padding: 15px 20px !important;
+  margin: 15px 0 !important;
+  color: #374151 !important;
+  font-style: normal !important;
+  position: relative !important;
+}
+
+#article-container blockquote::before,
+.article-content blockquote::before,
+.markdown-body blockquote::before,
+blockquote::before {
+  content: '"' !important;
+  font-size: 3em !important;
+  color: #1e3a8a !important;
+  opacity: 0.2 !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 10px !important;
+  font-family: Georgia, serif !important;
+}
+
+#article-container blockquote p,
+.article-content blockquote p,
+.markdown-body blockquote p,
+blockquote p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #374151 !important;
+  line-height: 1.8 !important;
+}
+
+/* 夜间模式引用块样式 */
+[data-theme="dark"] #article-container blockquote,
+[data-theme="dark"] .article-content blockquote,
+[data-theme="dark"] .markdown-body blockquote,
+[data-theme="dark"] blockquote {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(8, 145, 178, 0.15) 100%) !important;
+  border-left: 4px solid #0891b2 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #article-container blockquote::before,
+[data-theme="dark"] .article-content blockquote::before,
+[data-theme="dark"] .markdown-body blockquote::before,
+[data-theme="dark"] blockquote::before {
+  color: #0891b2 !important;
+}
+
+[data-theme="dark"] #article-container blockquote p,
+[data-theme="dark"] .article-content blockquote p,
+[data-theme="dark"] .markdown-body blockquote p,
+[data-theme="dark"] blockquote p {
+  color: #e2e8f0 !important;
+}
+
+/* 列表（ul、ol）样式优化 */
+#article-container ul,
+#article-container ol,
+.article-content ul,
+.article-content ol,
+.markdown-body ul,
+.markdown-body ol,
+ul,
+ol {
+  padding-left: 2em !important;
+  margin: 10px 0 !important;
+}
+
+#article-container ul li,
+#article-container ol li,
+.article-content ul li,
+.article-content ol li,
+.markdown-body ul li,
+.markdown-body ol li,
+ul li,
+ol li {
+  list-style: none !important;
+  position: relative !important;
+  padding: 5px 0 5px 25px !important;
+  color: #374151 !important;
+  line-height: 1.8 !important;
+}
+
+#article-container ul li::before,
+.article-content ul li::before,
+.markdown-body ul li::before,
+ul li::before {
+  content: '•' !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #1e3a8a !important;
+  font-weight: bold !important;
+  font-size: 1.2em !important;
+}
+
+#article-container ol li::before,
+.article-content ol li::before,
+.markdown-body ol li::before,
+ol li::before {
+  content: counter(list-counter) !important;
+  counter-increment: list-counter !important;
+  position: absolute !important;
+  left: 0 !important;
+  color: #1e3a8a !important;
+  font-weight: bold !important;
+}
+
+#article-container ol,
+.article-content ol,
+.markdown-body ol,
+ol {
+  counter-reset: list-counter !important;
+}
+
+/* 夜间模式列表样式 */
+[data-theme="dark"] #article-container ul li,
+[data-theme="dark"] #article-container ol li,
+[data-theme="dark"] .article-content ul li,
+[data-theme="dark"] .article-content ol li,
+[data-theme="dark"] .markdown-body ul li,
+[data-theme="dark"] .markdown-body ol li,
+[data-theme="dark"] ul li,
+[data-theme="dark"] ol li {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] #article-container ul li::before,
+[data-theme="dark"] .article-content ul li::before,
+[data-theme="dark"] .markdown-body ul li::before,
+[data-theme="dark"] ul li::before {
+  color: #0891b2 !important;
+}
+
+[data-theme="dark"] #article-container ol li::before,
+[data-theme="dark"] .article-content ol li::before,
+[data-theme="dark"] .markdown-body ol li::before,
+[data-theme="dark"] ol li::before {
+  color: #0891b2 !important;
+}
+
+/* 代码块（code）样式优化 */
+#article-container code,
+.article-content code,
+.markdown-body code,
+code {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(8, 145, 178, 0.1) 100%) !important;
+  color: #1e3a8a !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: 0.9em !important;
+}
+
+/* 代码块整体样式 */
+#article-container pre,
+.article-content pre,
+.markdown-body pre,
+pre {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0891b2 100%) !important;
+  border-radius: 8px !important;
+  padding: 15px !important;
+  margin: 15px 0 !important;
+  overflow-x: auto !important;
+}
+
+#article-container pre code,
+.article-content pre code,
+.markdown-body pre code,
+pre code {
+  background: transparent !important;
+  color: #ffffff !important;
+  padding: 0 !important;
+  font-size: 0.95em !important;
+  line-height: 1.6 !important;
+}
+
+/* 夜间模式代码块样式 */
+[data-theme="dark"] #article-container code,
+[data-theme="dark"] .article-content code,
+[data-theme="dark"] .markdown-body code,
+[data-theme="dark"] code {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, rgba(8, 145, 178, 0.2) 100%) !important;
+  color: #0891b2 !important;
+}
+
+[data-theme="dark"] #article-container pre,
+[data-theme="dark"] .article-content pre,
+[data-theme="dark"] .markdown-body pre,
+[data-theme="dark"] pre {
+  background: linear-gradient(135deg, #0e7490 0%, #1e3a8a 100%) !important;
+}
+
+[data-theme="dark"] #article-container pre code,
+[data-theme="dark"] .article-content pre code,
+[data-theme="dark"] .markdown-body pre code,
+[data-theme="dark"] pre code {
+  color: #ffffff !important;
+}
+
+/* 标题（h1-h6）样式优化 */
+#article-container h1,
+.article-content h1,
+.markdown-body h1,
+h1 {
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+  margin: 25px 0 15px 0 !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid #1e3a8a !important;
+  font-size: 1.8em !important;
+}
+
+#article-container h2,
+.article-content h2,
+.markdown-body h2,
+h2 {
+  color: #0891b2 !important;
+  font-weight: 600 !important;
+  margin: 20px 0 12px 0 !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #0891b2 !important;
+  font-size: 1.5em !important;
+}
+
+#article-container h3,
+.article-content h3,
+.markdown-body h3,
+h3 {
+  color: #0e7490 !important;
+  font-weight: 600 !important;
+  margin: 18px 0 10px 0 !important;
+  font-size: 1.3em !important;
+}
+
+#article-container h4,
+.article-content h4,
+.markdown-body h4,
+h4 {
+  color: #374151 !important;
+  font-weight: 600 !important;
+  margin: 15px 0 8px 0 !important;
+  font-size: 1.1em !important;
+}
+
+#article-container h5,
+.article-content h5,
+.markdown-body h5,
+h5 {
+  color: #4b5563 !important;
+  font-weight: 500 !important;
+  margin: 12px 0 6px 0 !important;
+  font-size: 1em !important;
+}
+
+#article-container h6,
+.article-content h6,
+.markdown-body h6,
+h6 {
+  color: #6b7280 !important;
+  font-weight: 500 !important;
+  margin: 10px 0 5px 0 !important;
+  font-size: 0.95em !important;
+}
+
+/* 夜间模式标题样式 */
+[data-theme="dark"] #article-container h1,
+[data-theme="dark"] .article-content h1,
+[data-theme="dark"] .markdown-body h1,
+[data-theme="dark"] h1 {
+  color: #0891b2 !important;
+  border-bottom-color: #0891b2 !important;
+}
+
+[data-theme="dark"] #article-container h2,
+[data-theme="dark"] .article-content h2,
+[data-theme="dark"] .markdown-body h2,
+[data-theme="dark"] h2 {
+  color: #0e7490 !important;
+  border-bottom-color: #0e7490 !important;
+}
+
+[data-theme="dark"] #article-container h3,
+[data-theme="dark"] .article-content h3,
+[data-theme="dark"] .markdown-body h3,
+[data-theme="dark"] h3 {
+  color: #06b6d4 !important;
+}
+
+[data-theme="dark"] #article-container h4,
+[data-theme="dark"] .article-content h4,
+[data-theme="dark"] .markdown-body h4,
+[data-theme="dark"] h4 {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] #article-container h5,
+[data-theme="dark"] .article-content h5,
+[data-theme="dark"] .markdown-body h5,
+[data-theme="dark"] h5 {
+  color: #d1d5db !important;
+}
+
+[data-theme="dark"] #article-container h6,
+[data-theme="dark"] .article-content h6,
+[data-theme="dark"] .markdown-body h6,
+[data-theme="dark"] h6 {
+  color: #e5e7eb !important;
+}
+
+/* 链接（a）悬停效果优化 */
+#article-container a,
+.article-content a,
+.markdown-body a,
+.article-content a,
+a {
+  color: #1e3a8a !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+#article-container a:hover,
+.article-content a:hover,
+.markdown-body a:hover,
+.article-content a:hover,
+a:hover {
+  color: #0891b2 !important;
+  text-decoration: none !important;
+}
+
+#article-container a::after,
+.article-content a::after,
+.markdown-body a::after,
+.article-content a::after,
+a::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(135deg, #1e3a8a 0%, #0891b2 100%) !important;
+  transition: width 0.3s ease !important;
+}
+
+#article-container a:hover::after,
+.article-content a:hover::after,
+.markdown-body a:hover::after,
+.article-content a:hover::after,
+a:hover::after {
+  width: 100% !important;
+}
+
+/* 夜间模式链接样式 */
+[data-theme="dark"] #article-container a,
+[data-theme="dark"] .article-content a,
+[data-theme="dark"] .markdown-body a,
+[data-theme="dark"] .article-content a,
+[data-theme="dark"] a {
+  color: #0891b2 !important;
+}
+
+[data-theme="dark"] #article-container a:hover,
+[data-theme="dark"] .article-content a:hover,
+[data-theme="dark"] .markdown-body a:hover,
+[data-theme="dark"] .article-content a:hover,
+[data-theme="dark"] a:hover {
+  color: #06b6d4 !important;
+}
+
+[data-theme="dark"] #article-container a::after,
+[data-theme="dark"] .article-content a::after,
+[data-theme="dark"] .markdown-body a::after,
+[data-theme="dark"] .article-content a::after,
+[data-theme="dark"] a::after {
+  background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%) !important;
+}
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
