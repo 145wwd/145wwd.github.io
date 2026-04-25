@@ -1,0 +1,10 @@
+name = "xuanxue-blog"
+compatibility_date = "2024-01-01"
+
+[pages_build_output]
+directory = "public"
+
+# 部署到自定义域名
+[[routes]]
+pattern = "xuanxue.daliuren.cfd/*"
+custom_domain = true
